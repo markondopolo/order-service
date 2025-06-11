@@ -18,8 +18,10 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-webflux'
 	runtimeOnly 'org.postgresql:postgresql'
 	runtimeOnly 'org.postgresql:r2dbc-postgresql'
-	runtimeOnly('org.flywaydb:flyway-core')
+	runtimeOnly('org.flywaydb:flyway-core:9.5.0')
 	runtimeOnly('org.springframework:spring-jdbc')
+	runtimeOnly ('io.netty:netty-resolver-dns-native-macos:4.1.109.Final:osx-aarch_64')
+
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.boot:spring-boot-testcontainers'
 	testImplementation 'io.projectreactor:reactor-test'
@@ -27,6 +29,8 @@ dependencies {
 	testImplementation 'org.testcontainers:postgresql'
 	testImplementation 'org.testcontainers:r2dbc'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
 }
 
 tasks.named('test') {
