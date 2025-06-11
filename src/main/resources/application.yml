@@ -13,7 +13,7 @@ spring:
   r2dbc:
     username: user
     password: password
-    url: r2dbc:postgresql://localhost:5432/polardb-order
+    url: r2dbc:postgresql://localhost:5432/polardb_order
     pool:
       max-create-connection-time: 2s
       initial-size: 5
